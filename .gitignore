@@ -1,2 +1,5 @@
+*pyc
+viz/*
+viz1/*
 *.xlsx
 *.csv
