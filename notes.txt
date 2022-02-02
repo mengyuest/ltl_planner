@@ -1,0 +1,8 @@
+Jan 29
+
+Created new env ltl (python=2.7)
+Instaleld tulip
+Downloaded the ltlt dataset (xlsx)
+
+1. Parse the ltl to APs, and Ps
+2. How to define traces?
