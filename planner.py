@@ -1,7 +1,7 @@
 # In due time, reach the house and eventually collect the pear	( F ( ( reach_v ( house_n ) ) U ( collect_v ( pear_n ) ) ) )
 
 from tulip import transys, spec, synth
-import viz
+import viz_utils
 
 def cat(dict1, dict2):
     return(dict2.update(dict1))
@@ -140,7 +140,7 @@ for ti in range(len(xs)):
                 mode="pear"
             else:
                 mode="space"
-            viz.viz_grid(i, j, n_grid, mode, new=not (mode in is_first))
+            viz_utils.viz_grid(i, j, n_grid, mode, new=not (mode in is_first))
             is_first.add(mode)
 
     plt.plot(xs[:-1], ys[:-1], label="traj")

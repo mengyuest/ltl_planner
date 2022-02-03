@@ -1,0 +1,243 @@
+
+(ltl) meng@whisman:~/mit/ltl_trace$ python lily_planner.py 
+No handlers could be found for logger "polytope.solvers"
+X0=1;
+G( ( (!( X0=1 * X1=1 )) * (!( X0=1 * X2=1 )) * (!( X0=1 * X3=1 )) * (!( X0=1 * X4=1 )) * (!( X0=1 * X5=1 )) * (!( X1=1 * X2=1 )) * (!( X1=1 * X3=1 )) * (!( X1=1 * X4=1 )) * (!( X1=1 * X5=1 )) * (!( X2=1 * X3=1 )) * (!( X2=1 * X4=1 )) * (!( X2=1 * X5=1 )) * (!( X3=1 * X4=1 )) * (!( X3=1 * X5=1 )) * (!( X4=1 * X5=1 )) * ( X0=1 + X1=1 + X2=1 + X3=1 + X4=1 + X5=1 )) * ( X2=1 -> X( X1=1 + X5=1 ) ) * ( X3=1 -> X( X0=1 + X4=1 ) ) * ( X0=1 -> X( X3=1 + X1=1 ) ) * ( X1=1 -> X( X2=1 + X0=1 + X4=1 ) ) * ( X4=1 -> X( X3=1 + X1=1 + X5=1 ) ) * ( X5=1 -> X( X2=1 + X4=1 + X5=1 ) ) );
+G( (X2=1 -> (home=0 * lot=0)) * (X3=1 -> (home=0 * lot=0)) * (X0=1 -> (home=1 * lot=0)) * (X1=1 -> (home=0 * lot=0)) * (X4=1 -> (home=0 * lot=0)) * (X5=1 -> (lot=1 * home=0)) );
+( F(G(lot=1)) );
+
+
+inputs: 
+outputs: X0 X1 X2 X3 X4 X5 home lot 
+Read LTL file.
+Optimizations:
+NBW:1 UCT:1 AWT:1 WIT:1 MH:1 MHC:1 Edges:1 Release:1 Reuse:1 formula: (( F(G(lot=1)) ))*((G( (X2=1 -> (home=0 * lot=0)) * (X3=1 -> (home=0 * lot=0)) * (X0=1 -> (home=1 * lot=0)) * (X1=1 -> (home=0 * lot=0)) * (X4=1 -> (home=0 * lot=0)) * (X5=1 -> (lot=1 * home=0)) ))*((G( ( (!( X0=1 * X1=1 )) * (!( X0=1 * X2=1 )) * (!( X0=1 * X3=1 )) * (!( X0=1 * X4=1 )) * (!( X0=1 * X5=1 )) * (!( X1=1 * X2=1 )) * (!( X1=1 * X3=1 )) * (!( X1=1 * X4=1 )) * (!( X1=1 * X5=1 )) * (!( X2=1 * X3=1 )) * (!( X2=1 * X4=1 )) * (!( X2=1 * X5=1 )) * (!( X3=1 * X4=1 )) * (!( X3=1 * X5=1 )) * (!( X4=1 * X5=1 )) * ( X0=1 + X1=1 + X2=1 + X3=1 + X4=1 + X5=1 )) * ( X2=1 -> X( X1=1 + X5=1 ) ) * ( X3=1 -> X( X0=1 + X4=1 ) ) * ( X0=1 -> X( X3=1 + X1=1 ) ) * ( X1=1 -> X( X2=1 + X0=1 + X4=1 ) ) * ( X4=1 -> X( X3=1 + X1=1 + X5=1 ) ) * ( X5=1 -> X( X2=1 + X4=1 + X5=1 ) ) ))*(X0=1)))
+----------------------------------------------------------------------
+Build word automaton for ((FALSE)R((TRUE)U(lot=0)))+(((TRUE)U(((((((X2=1)*((home=1)+(lot=1)))+((X3=1)*((home=1)+(lot=1))))+((X0=1)*((home=0)+(lot=1))))+((X1=1)*((home=1)+(lot=1))))+((X4=1)*((home=1)+(lot=1))))+((X5=1)*((lot=0)+(home=1)))))+(((TRUE)U(((((((((((((((((((((((X0=1)*(X1=1))+((X0=1)*(X2=1)))+((X0=1)*(X3=1)))+((X0=1)*(X4=1)))+((X0=1)*(X5=1)))+((X1=1)*(X2=1)))+((X1=1)*(X3=1)))+((X1=1)*(X4=1)))+((X1=1)*(X5=1)))+((X2=1)*(X3=1)))+((X2=1)*(X4=1)))+((X2=1)*(X5=1)))+((X3=1)*(X4=1)))+((X3=1)*(X5=1)))+((X4=1)*(X5=1)))+((((((X0=0)*(X1=0))*(X2=0))*(X3=0))*(X4=0))*(X5=0)))+((X2=1)*(X((X1=0)*(X5=0)))))+((X3=1)*(X((X0=0)*(X4=0)))))+((X0=1)*(X((X3=0)*(X1=0)))))+((X1=1)*(X(((X2=0)*(X0=0))*(X4=0)))))+((X4=1)*(X(((X3=0)*(X1=0))*(X5=0)))))+((X5=1)*(X(((X2=0)*(X4=0))*(X5=0))))))+(X0=0)))
+46 states, 82 trans, 3 fair sets, 39 init states, strong
+45 states, 80 trans, 1 fair sets, 36 init states, strong
+Stats NBW (not phi): 45 states, 80 trans, 1 fair sets, 36 init states, strong
+Stats NBW: 45 states, 80 trans, 1 fair sets, 36 init states, strong
+Build NBW done
+NBW(state-labeled) -> NBW(transition labeled)...
+NBW (state) -> NBW (trans) done
+Stats NBW: 11 states, 48 trans, 1 fair sets, 1 init states, strong
+NBW -> UCT...
+X4 is recognized as output.
+lot is recognized as output.
+X5 is recognized as output.
+X0 is recognized as output.
+X3 is recognized as output.
+X2 is recognized as output.
+home is recognized as output.
+X1 is recognized as output.
+Recognized n1 as a true state because it is represented by the empty set.
+Stats UCT: 11 states, 3918 trans, 1 fair sets, 1 init states, unknown
+Remove lost states in the UCT..
+{n1}
+Stats UCT: 10 states, 19 trans, 1 fair sets, 1 init states, unknown
+Remove lost states done
+Stats UCT LS: 10 states, 19 trans, 1 fair sets, 1 init states, unknown
+NBW -> UCT done
+Increase rank bound if the formula is not realizable
+---------- Synthesize with rank 0 ----------
+UCT -> AWT...
+UCT is not weak - Start translation with rank 0
+-- Create2layers --
+Stats AWT: 10 states, 19 trans, 1 fair sets, 1 init states, unknown
+AWT Minimization...
+Language of this AWT (rank 0) is empty
+Remove lost states in the AWT..
+{n45_0,n44_0,init_0,n43_0}
+Stats AWT LS: 6 states, 0 trans, 1 fair sets, 0 init states, unknown
+SIMULATION:
+{[n38_0,n42_0],[n36_0,n41_0],[n37_0,n41_0]} 3
+{[n38_0,n42_0],[n36_0,n41_0],[n37_0,n41_0]}
+-- Pair:n38_0 n42_0
+-- Pair:n36_0 n41_0
+-- Pair:n37_0 n41_0
+AWT Minimization done
+Stats AWT SIM: 6 states, 0 trans, 1 fair sets, 0 init states, unknown
+UCT -> AWT done
+---------- Synthesize with rank 1 ----------
+-- Create2layers --
+Stats AWT: 17 states, 22 trans, 1 fair sets, 1 init states, unknown
+AWT Minimization...
+Remove lost states in the AWT..
+{n44_0,n43_0}
+Stats AWT: 15 states, 16 trans, 1 fair sets, 1 init states, unknown
+Remove lost states done
+Stats AWT LS: 15 states, 16 trans, 1 fair sets, 1 init states, unknown
+SIMULATION:
+{[n37_1,n41_1],[n36_0,n41_1],[init_1,n38_1],[n37_0,n41_1],[n37_0,n41_0],[init_1,n42_1],[n37_0,n37_1],[n38_0,n42_1],[n41_0,n41_1],[n36_1,n41_1],[n38_1,n42_1],[n36_0,n41_0],[n36_0,n36_1],[n42_0,n42_1],[n40_0,n40_1],[n38_0,n38_1],[n38_0,n42_0]} 17
+{[n37_1,n41_1],[n36_0,n41_1],[init_1,n38_1],[n37_0,n41_1],[n37_0,n41_0],[init_1,n42_1],[n37_0,n37_1],[n38_0,n42_1],[n41_0,n41_1],[n36_1,n41_1],[n38_1,n42_1],[n36_0,n41_0],[n36_0,n36_1],[n42_0,n42_1],[n40_0,n40_1],[n38_0,n38_1],[n38_0,n42_0]}
+-- Pair:n37_1 n41_1
+-- Pair:n36_0 n41_1
+-- Pair:init_1 n38_1
+-- Pair:n37_0 n41_1
+-- Pair:n37_0 n41_0
+-- Pair:init_1 n42_1
+-- Pair:n37_0 n37_1
+-- Pair:n38_0 n42_1
+-- Pair:n41_0 n41_1
+-- Pair:n36_1 n41_1
+-- Pair:n38_1 n42_1
+-- Pair:n36_0 n41_0
+-- Pair:n36_0 n36_1
+-- Pair:n42_0 n42_1
+-- Pair:n40_0 n40_1
+-- Pair:n38_0 n38_1
+-- Pair:n38_0 n42_0
+AWT Minimization done
+Stats AWT SIM: 15 states, 16 trans, 1 fair sets, 1 init states, unknown
+UCT -> AWT done
+AWT -> NBT + Witness...
+MHLevel 0: expand 1 states, 
+MH time: 0.10 seconds
+2 total states, 
+MHLevel 1: expand 1 states, 
+
+MH time: 0.11 seconds
+2 total states, 
+0 winning states.
+Initial state is not winning.
+Stats NBT: 2 states, 1 trans, 1 fair sets, 1 init states, unknown
+---------- Synthesize with rank 2 ----------
+-- Create2layers --
+Stats AWT: 25 states, 96 trans, 1 fair sets, 1 init states, unknown
+AWT Minimization...
+Remove lost states in the AWT..
+{}
+Stats AWT: 25 states, 96 trans, 1 fair sets, 1 init states, unknown
+Remove lost states done
+Stats AWT LS: 25 states, 96 trans, 1 fair sets, 1 init states, unknown
+SIMULATION:
+{[n38_2,n42_1],[n41_0,n41_2],[n42_0,n42_2],[n38_0,n42_0],[init_2,n38_1],[n42_0,n42_1],[n38_2,n42_0],[n36_0,n36_1],[init_2,n38_2],[n36_0,n41_0],[n41_2,n41_0],[n38_1,n42_1],[n42_2,n42_1],[n41_2,n41_1],[init_2,n38_0],[n37_2,n37_0],[n41_0,n41_1],[n38_0,n42_1],[n36_2,n36_0],[n38_0,n42_2],[n37_0,n37_1],[n38_0,n38_2],[n40_2,n40_0],[n37_0,n41_0],[init_2,n42_2],[n37_0,n41_1],[n36_0,n41_2],[n40_0,n40_2],[n37_1,n41_1],[n40_2,n40_1],[n36_2,n41_2],[n38_0,n38_1],[n37_0,n37_2],[n38_2,n38_1],[n37_0,n41_2],[n40_0,n40_1],[n45_2,n45_1],[n36_2,n41_1],[n37_2,n41_2],[n38_2,n38_0],[n37_2,n41_0],[n36_1,n41_1],[n36_2,n36_1],[n37_2,n41_1],[n36_0,n36_2],[n36_2,n41_0],[init_1,n42_1],[init_2,n42_1],[init_1,n38_1],[n42_2,n42_0],[n38_2,n42_2],[n36_0,n41_1],[n44_2,n43_2],[n37_2,n37_1],[init_2,n42_0]} 55
+{[n38_2,n42_1],[n41_0,n41_2],[n42_0,n42_2],[n38_0,n42_0],[init_2,n38_1],[n42_0,n42_1],[n38_2,n42_0],[n36_0,n36_1],[init_2,n38_2],[n36_0,n41_0],[n41_2,n41_0],[n38_1,n42_1],[n42_2,n42_1],[n41_2,n41_1],[init_2,n38_0],[n37_2,n37_0],[n41_0,n41_1],[n38_0,n42_1],[n36_2,n36_0],[n38_0,n42_2],[n37_0,n37_1],[n38_0,n38_2],[n40_2,n40_0],[n37_0,n41_0],[init_2,n42_2],[n37_0,n41_1],[n36_0,n41_2],[n40_0,n40_2],[n37_1,n41_1],[n40_2,n40_1],[n36_2,n41_2],[n38_0,n38_1],[n37_0,n37_2],[n38_2,n38_1],[n37_0,n41_2],[n40_0,n40_1],[n45_2,n45_1],[n36_2,n41_1],[n37_2,n41_2],[n38_2,n38_0],[n37_2,n41_0],[n36_1,n41_1],[n36_2,n36_1],[n37_2,n41_1],[n36_0,n36_2],[n36_2,n41_0],[init_1,n42_1],[init_2,n42_1],[init_1,n38_1],[n42_2,n42_0],[n38_2,n42_2],[n36_0,n41_1],[n44_2,n43_2],[n37_2,n37_1],[init_2,n42_0]}
+n41_2 is direct-simulation equivalent to n41_0
+n42_2 is direct-simulation equivalent to n42_0
+n37_2 is direct-simulation equivalent to n37_0
+n36_2 is direct-simulation equivalent to n36_0
+n38_2 is direct-simulation equivalent to n38_0
+n40_2 is direct-simulation equivalent to n40_0
+-- Pair:n38_0 n42_0
+-- Pair:init_2 n38_1
+-- Pair:n42_0 n42_1
+-- Pair:n36_0 n36_1
+-- Pair:n36_0 n41_0
+-- Pair:n38_1 n42_1
+-- Pair:init_2 n38_0
+-- Pair:n41_0 n41_1
+-- Pair:n38_0 n42_1
+-- Pair:n37_0 n37_1
+-- Pair:n37_0 n41_0
+-- Pair:n37_0 n41_1
+-- Pair:n37_1 n41_1
+-- Pair:n38_0 n38_1
+-- Pair:n40_0 n40_1
+-- Pair:n45_2 n45_1
+-- Pair:n36_1 n41_1
+-- Pair:init_1 n42_1
+-- Pair:init_2 n42_1
+-- Pair:init_1 n38_1
+-- Pair:n36_0 n41_1
+-- Pair:n44_2 n43_2
+Remove second in [{},n43_2]
+-- Pair:init_2 n42_0
+AWT Minimization done
+Stats AWT SIM: 19 states, 41 trans, 1 fair sets, 1 init states, unknown
+UCT -> AWT done
+AWT -> NBT + Witness...
+MHLevel 0: expand 1 states, 
+MH time: 0.10 seconds
+4 total states, 
+MHLevel 1: expand 1 states, 
+
+MH time: 0.00 seconds
+8 total states, 
+0 winning states.
+Initial state is not winning.
+MHLevel 2: expand 4 states, 
+
+MH time: 0.02 seconds
+13 total states, 
+0 winning states.
+Initial state is not winning.
+MHLevel 3: expand 5 states, 
+
+MH time: 0.01 seconds
+15 total states, 
+0 winning states.
+Initial state is not winning.
+MHLevel 4: expand 2 states, 
+
+MH time: 0.01 seconds
+15 total states, 
+10 winning states.
+done
+Calculate winning strategy...done
+Build witness...Add state init_2
+Add state n44_2n36_1n45_1-n44_2
+Add state n44_2n38_1n45_1-n44_2
+Add state n45_1n41_1n44_2-n44_2
+Add state n45_1n40_1n44_1
+done
+Stats NBT: 15 states, 38 trans, 1 fair sets, 1 init states, unknown
+Stats Witness: 5 states, 5 trans, 0 fair sets, 1 init states, unknown
+Optimize strategy tree...done
+Stats Witness opt: 4 states, 4 trans, 0 fair sets, 1 init states, unknown
+Results can be found in ltl2vl-verilog.v and ltl2vl-synthesis.dot
+NBW time: 250.15 seconds
+Synthesis time: 1577.43 seconds
+Total time: 1827.58 seconds
+
+----------------------------------------
+Moore Machine: 
+----------------------------------------
+State Variables:
+	(name : type)
+
+Input Ports:
+	(name : type)
+	 : set([False, True])
+
+Output Ports:
+	(name : type)
+	lot : set([False, True])
+	X3 : set([False, True])
+	X2 : set([False, True])
+	home : set([False, True])
+	X0 : set([False, True])
+	X1 : set([False, True])
+	X4 : set([False, True])
+	X5 : set([False, True])
+
+States & State Var Values: (state : outputs : vars)
+	0 :
+
+ : 		lot : True
+		X3 : False
+		X2 : False
+		home : False
+		X0 : False
+		X1 : False
+		X4 : False
+		X5 : True
+
+	1 :
+
+ : 		lot : False
+		X3 : False
+		X2 : False
+		home : True
+		X0 : True
+		X1 : False
+		X4 : False
+		X5 : False
+
+	2 :
+
+ : 		lot : False
+		home : False
+		X2 : False
+

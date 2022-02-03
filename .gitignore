@@ -1,6 +1,11 @@
 *pyc
 viz/*
 viz1/*
+viz2*
 .idea
 *.xlsx
 *.csv
+*.dot
+*.v
+*.uct
+cache/*
